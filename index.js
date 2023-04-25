@@ -6,13 +6,13 @@ const app = express()
 
 morgan.token('body', (request) => JSON.stringify(request.body));
 
-// const requestLogger = (request, response, next) => {
-//   console.log('Method:', request.method)
-//   console.log('Path:  ', request.path)
-//   console.log('Body:  ', request.body)
-//   console.log('---')
-//   next()
-// }
+const requestLogger = (request, response, next) => {
+  console.log('Method:', request.method)
+  console.log('Path:  ', request.path)
+  console.log('Body:  ', request.body)
+  console.log('---')
+  next()
+}
 
 // const unknownEndpoint = (request, response) => {
 //   response.status(404).send({ error: 'unknown endpoint' })
@@ -21,7 +21,7 @@ morgan.token('body', (request) => JSON.stringify(request.body));
 app.use(express.json())
 app.use(morgan(':method :url :status :response-time ms - :res[content-length] :body'));
 app.use(cors())
-// app.use(requestLogger)
+app.use(requestLogger)
 
 let notes = [
   {
