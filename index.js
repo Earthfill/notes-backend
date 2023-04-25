@@ -19,6 +19,7 @@ const requestLogger = (request, response, next) => {
 // }
 
 app.use(express.json())
+app.use(express.static('build'))
 app.use(morgan(':method :url :status :response-time ms - :res[content-length] :body'));
 app.use(cors())
 app.use(requestLogger)
