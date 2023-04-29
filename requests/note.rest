@@ -8,8 +8,8 @@ POST http://localhost:3001/api/notes
 Content-Type: application/json
 
 {
-  "content": "Postman is good in testing backend",
-  "important": false
+  "content": "Node.js for backend",
+  "important": true
 }
 
 ###
@@ -22,4 +22,4 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:3001/api/notes/644b5ac84ca981483eeea8d3
+DELETE http://localhost:3001/api/notes/644cec8ef2bf62c13f4c87a0
