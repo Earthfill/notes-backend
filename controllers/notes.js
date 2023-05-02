@@ -29,7 +29,7 @@ notesRouter.post("/", async (request, response) => {
 	})
 
 	const savedNote = await note.save()
-full
+
 	response.status(201).json(savedNote)
 })
 
