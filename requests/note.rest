@@ -8,8 +8,8 @@ POST http://localhost:3001/api/notes
 Content-Type: application/json
 
 {
-  "content": "Node.js for backend",
-  "important": true
+  "content": "Node for backend",
+  "important": false
 }
 
 ###
@@ -17,9 +17,9 @@ PUT http://localhost:3001/api/notes/6449667a2f9b67f76028792d
 Content-Type: application/json
 
 {
-  "content": "HTML is Easy-ish",
+  "content": "HTML is Easy",
   "important": false
 }
 
 ###
-DELETE http://localhost:3001/api/notes/644cec8ef2bf62c13f4c87a0
+DELETE http://localhost:3001/api/notes/644f5684138701b1f8673b7c
